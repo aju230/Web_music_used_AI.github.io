@@ -6,101 +6,173 @@
     <title>OnBeat - 最高の音質を、もっと身近に。</title>
     <style>
         body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FFF8E1; /* 暖色系の背景色 */
-    color: #5D4037; /* 濃い茶色 */
-}
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF8E1; /* 暖色系の背景色 */
+            color: #5D4037; /* 濃い茶色 */
+        }
 
-header {
-    background-color: #FF7043; /* オレンジ */
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-}
+        header {
+            background-color: #FF7043; /* オレンジ */
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 3rem;
-    font-weight: bold;
-}
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: bold;
+        }
 
-header .catchphrase {
-    margin: 0;
-    font-size: 1.2rem;
-}
+        header .catchphrase {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+        }
+        
+        nav ul {
+            padding: 0;
+            margin: 1.5rem 0 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
 
-main {
-    padding: 2rem;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
 
-.hero {
-    text-align: center;
-    margin-bottom: 3rem;
-}
+        nav a:hover {
+            color: #FFF8E1; /* ホバー時の色 */
+        }
 
-.hero h2 {
-    font-size: 2.5rem;
-    color: #D84315; /* 濃いオレンジ */
-}
+        main {
+            padding: 2rem;
+        }
 
-.products {
-    text-align: center;
-}
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
 
-.products h2 {
-    font-size: 2rem;
-    color: #D84315;
-    margin-bottom: 2rem;
-}
+        .hero h2 {
+            font-size: 2.5rem;
+            color: #D84315; /* 濃いオレンジ */
+        }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
+        .products {
+            text-align: center;
+        }
 
-.product-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.3s;
-}
+        .products h2 {
+            font-size: 2rem;
+            color: #D84315;
+            margin-bottom: 2rem;
+        }
 
-.product-card:hover {
-    transform: translateY(-10px);
-}
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
 
-.product-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
 
-.product-card h3 {
-    color: #BF360C; /* さらに濃いオレンジ */
-    padding: 1rem 0 0.5rem;
-}
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
 
-.product-card p {
-    padding: 0 1rem 1.5rem;
-}
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
 
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: #FFCC80; /* 薄いオレンジ */
-    color: #5D4037;
-    margin-top: 2rem;
-}
+        .product-card h3 {
+            color: #BF360C; /* さらに濃いオレンジ */
+            padding: 1rem 0 0.5rem;
+        }
+
+        .product-card p {
+            padding: 0 1rem 1.5rem;
+        }
+        
+        .features {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+        .features h2 {
+            font-size: 2rem;
+            color: #D84315;
+            margin-bottom: 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            background-color: #FFCC80; /* 薄いオレンジ */
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .feature-item h3 {
+            color: #BF360C;
+            margin-top: 0;
+        }
+
+        /* --- ▼ここから追加 --- */
+        .feature-item img {
+            width: 100%; /* 親要素に合わせて幅を調整 */
+            max-width: 150px; /* 最大幅を設定 */
+            height: auto;
+            border-radius: 50%; /* 円形にする */
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* --- ▲ここまで追加 --- */
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #FFCC80; /* 薄いオレンジ */
+            color: #5D4037;
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>OnBeat</h1>
         <p class="catchphrase">最高の音質を、もっと身近に。</p>
+        
+        <nav>
+            <ul>
+                <li><a href="#">Onbeatとは</a></li>
+                <li><a href="#">製品 (Product)</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
     </header>
 
     <main>
@@ -113,23 +185,44 @@ footer {
             <h2>おすすめ製品</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="ワイヤレスヘッドホン">
+                    <img src="img/HeadSet.png" alt="ワイヤレスヘッドホン">
                     <h3>ワイヤレスヘッドホン</h3>
                     <p>クリアな高音質と快適な装着感。</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1543468266-9aca0223531b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="ポータブルスピーカー">
+                    <img src="img/Sp.png" alt="ポータブルスピーカー">
                     <h3>ポータブルスピーカー</h3>
                     <p>どこでもパワフルなサウンドを。</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1620331317387-a68143ac05d4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="PC用スピーカー">
+                    <img src="img/PCSp.png" alt="PC用スピーカー">
                     <h3>PC用スピーカー</h3>
                     <p>迫力の重低音で、臨場感あふれる体験を。</p>
                 </div>
             </div>
         </section>
-    </main>
+
+        <section class="features">
+            <h2>OnBeatが選ばれる理由</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <img src="img/lisman.png" alt="クリアな高音質">
+                    <h3>心に響くクリアな高音質</h3>
+                    <p>独自の音響技術でアーティストの息づかいまで再現。まるでライブ会場にいるかのような臨場感あふれるサウンド体験をあなたに届けます。</p>
+                </div>
+                <div class="feature-item">
+                    <img src="img/PCSp2.png" alt="暮らしに溶け込むデザイン">
+                    <h3>暮らしに溶け込むデザイン</h3>
+                    <p>どんなインテリアにも馴染む、暖かみのあるミニマルなデザイン。あなたの空間をお気に入りの音楽で彩り、心地よい毎日を演出します。</p>
+                </div>
+                <div class="feature-item">
+                    <img src="img/useSp.png" alt="直感的な操作">
+                    <h3>直感的な操作で、もっと自由に</h3>
+                    <p>複雑な設定はもう不要です。誰でも簡単に使えるシンプルな操作性で、いつでもどこでも、すぐにあなたを音楽の世界へと誘います。</p>
+                </div>
+            </div>
+        </section>
+        </main>
 
     <footer>
         <p>&copy; 2025 OnBeat</p>

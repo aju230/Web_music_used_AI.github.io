@@ -18,10 +18,11 @@
         }
 
         header {
-            background: repeating-linear-gradient(goldenrod, goldenrod 180px,  #FF7043 100px, #FF7043 350px);
+            background-color: #FF7043;
             color: white;
             text-align: center;
             padding: 2rem 1rem;
+            position: relative;
         }
 
         header h1 {
@@ -41,23 +42,31 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1rem;
         }
-
-        nav a {
+        
+        /* --- ▼ここから変更・追加 --- */
+        nav button {
+            background-color: #D84315; /* 濃いオレンジ */
             color: white;
-            text-decoration: none;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
             font-weight: bold;
             font-size: 1rem;
-            transition: color 0.3s ease;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
-        nav a:hover {
-            color: #FFF8E1; /* ホバー時の色 */
+        nav button:hover {
+            background-color: #BF360C; /* さらに濃いオレンジ */
         }
+        /* --- ▲ここまで --- */
 
         main {
             padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .hero {
@@ -145,14 +154,54 @@
         }
 
         .feature-item img {
-            width: 100%; /* 親要素に合わせて幅を調整 */
-            max-width: 150px; /* 最大幅を設定 */
+            width: 100%;
+            max-width: 150px;
             height: auto;
-            border-radius: 50%; /* 円形にする */
+            border-radius: 50%;
             margin-bottom: 1rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
+
+        /* --- ▼ここから追加 --- */
+        .content-section {
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            color: #D84315;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .about-content, .product-item {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .about-content:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .about-text, .product-text {
+            flex: 1;
+        }
+
+        .about-image, .product-image {
+            flex: 1;
+            max-width: 500px;
+        }
+        .about-image img, .product-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        /* --- ▲ここまで追加 --- */
         .cm {
             text-align: center; /* セクション全体を中央揃え */
             padding: 3rem 0;
@@ -184,29 +233,121 @@
 </head>
 <body>
     <header>
-        <img src="img/Logo.png" height="200" width="200" alt="OnBeat Logo">
+        <a href="https://aju230.github.io/Web_music_used_AI.github.io/"><img src="img/Logo.png" height="150" width="auto" alt="OnBeat Logo"></a>
         <p class="catchphrase"><b>最高の音質を、もっと身近に。</b></p>
         <nav>
             <ul>
-                <li><button id="Wht" onclick="abt();">Onbeatとは</a></li>
-                <li><a href="#">製品 (Product)</a></li>
-                <li><a href="#">お問い合わせ</a></li>
+                <li><button id="Wht" onclick="abt();">Onbeatとは</button></li>
+                <li><button id="Pd" onclick="Pro();">製品 (Product)</button></li>
+                <li><button id="Cn" onclick="Con();">お問い合わせ</button></li>
             </ul>
         </nav>
     </header>
 
     <main id="detail">
-        <script>
-            const vid = document.getElementById('com');
-            const de = document.getElementById('de');
-
-            detail.innerHTML = 
-            '<section class="hero"><h2>好きな音で、毎日を彩ろう。</h2><p>OnBeatの製品で、あなたの日常がもっと豊かになる。</p></section><section class="products"><h2>おすすめ製品</h2><div class="product-grid"><div class="product-card"><img src="img/HeadSet.png" alt="ワイヤレスヘッドホン"><h3>ワイヤレスヘッドホン</h3><p>クリアな高音質と快適な装着感。</p></div><div class="product-card"><img src="img/Sp.png" alt="ポータブルスピーカー"><h3>ポータブルスピーカー</h3><p>どこでもパワフルなサウンドを。</p></div><div class="product-card"><img src="img/PCSp.png" alt="PC用スピーカー"><h3>PC用スピーカー</h3><p>迫力の重低音で、臨場感あふれる体験を。</p></div> </div></section><section class="features"><h2>OnBeatが選ばれる理由</h2><div class="features-grid"><div class="feature-item"><img src="img/lisman.png" alt="クリアな高音質"><h3>心に響くクリアな高音質</h3><p>独自の音響技術でアーティストの息づかいまで再現。まるでライブ会場にいるかのような臨場感あふれるサウンド体験をあなたに届けます。</p></div><div class="feature-item"><img src="img/PCSp2.png" alt="暮らしに溶け込むデザイン"><h3>暮らしに溶け込むデザイン</h3><p>どんなインテリアにも馴染む、暖かみのあるミニマルなデザイン。あなたの空間をお気に入りの音楽で彩り、心地よい毎日を演出します。</p></div><div class="feature-item"><img src="img/useSp.png" alt="直感的な操作"><h3>直感的な操作で、もっと自由に</h3><p>複雑な設定はもう不要です。誰でも簡単に使えるシンプルな操作性で、いつでもどこでも、すぐにあなたを音楽の世界へと誘います。</p></div></div></section><section class="cm"><h2>CM</h2><video id="com" width="640" controls><source src="video/CM.mp4" type="video/mp4">お使いのブラウザは動画タグに対応していません。</video><video id="com" width="640" controls><source src="video/CM2.mp4" type="video/mp4">お使いのブラウザは動画タグに対応していません。</video></section>';
-        </script>
         </main>
 
+    <script>
+        const detail = document.getElementById('detail');
+
+        const initialContent = `
+            <section class="hero"><h2>好きな音で、毎日を彩ろう。</h2><p>OnBeatの製品で、あなたの日常がもっと豊かになる。</p></section>
+            <section class="products">
+                <h2>おすすめ製品</h2>
+                <div class="product-grid">
+                    <div class="product-card"><img src="img/HeadSet.png" alt="ワイヤレスヘッドホン"><h3>ワイヤレスヘッドホン</h3><p>Sinoシリーズ</p><p>クリアな高音質と快適な装着感。</p></div>
+                    <div class="product-card"><img src="img/Sp.png" alt="ポータブルスピーカー"><h3>ポータブルスピーカー</h3><p>Glatiotonシリーズ</p><p>どこでもパワフルなサウンドを。</p></div>
+                    <div class="product-card"><img src="img/PCSp.png" alt="PC用スピーカー"><h3>PC用スピーカー</h3><p>Domidoシリーズ</p><p>迫力の重低音で、臨場感あふれる体験を。</p></div>
+                </div>
+            </section>
+            <section class="features">
+                <h2>OnBeatが選ばれる理由</h2>
+                <div class="features-grid">
+                    <div class="feature-item"><img src="img/lisman.png" alt="クリアな高音質"><h3>心に響くクリアな高音質</h3><p>独自の音響技術でアーティストの息づかいまで再現。まるでライブ会場にいるかのような臨場感あふれるサウンド体験をあなたに届けます。</p></div>
+                    <div class="feature-item"><img src="img/PCSp2.png" alt="暮らしに溶け込むデザイン"><h3>暮らしに溶け込むデザイン</h3><p>どんなインテリアにも馴染む、暖かみのあるミニマルなデザイン。あなたの空間をお気に入りの音楽で彩り、心地よい毎日を演出します。</p></div>
+                    <div class="feature-item"><img src="img/useSp.png" alt="直感的な操作"><h3>直感的な操作で、もっと自由に</h3><p>複雑な設定はもう不要です。誰でも簡単に使えるシンプルな操作性で、いつでもどこでも、すぐにあなたを音楽の世界へと誘います。</p></div>
+                </div>
+            </section>
+            <section class="cm">
+                <h2>CM</h2>
+                <video id="com" width="640" controls><source src="video/CM.mp4" type="video/mp4">お使いのブラウザは動画タグに対応していません。</video>
+                <video id="com" width="640" controls><source src="video/CM2.mp4" type="video/mp4">お使いのブラウザは動画タグに対応していません。</video>
+                </section>`;
+        
+        // 初期コンテンツを表示
+        detail.innerHTML = initialContent;
+
+        function abt() {
+            detail.innerHTML = `
+            <section class="content-section">
+                <h2>OnBeatとは</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>音楽と、もっと良い関係を。</h3>
+                        <p>OnBeatは、「最高の音質を、もっと身近に」をコンセプトにしたオーディオブランドです。私たちは、音楽が日々の暮らしを豊かにする力を持っていると信じています。通勤中、仕事や勉強に集中したい時、仲間と過ごす楽しい時間。どんなシーンでも、心に響くサウンド体験を提供することで、あなたの日常をより特別なものに変えていきたい。OnBeatの製品は、最新の音響技術と、どんなライフスタイルにも溶け込むカジュアルなデザインを両立させています。</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="http://googleusercontent.com/image_generation_content/3" alt="カフェで音楽を聴く男性">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>暮らしに溶け込むデザイン</h3>
+                        <p>私たちは、音質だけでなくデザインも重視しています。主張しすぎず、それでいて確かな存在感を放つ。暖かみのある色合いとミニマルなフォルムは、どんなインテリアにも自然に馴染みます。あなたの部屋が、お気に入りの音楽で満たされる特別な空間になるように。OnBeatは、音とデザインの力で、あなたの毎日がもっと心地よく、もっと楽しくなるためのお手伝いをします。さあ、私たちと一緒にお気に入りの音を見つけましょう。</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="http://googleusercontent.com/image_generation_content/11" alt="インテリアに馴染むスピーカー">
+                    </div>
+                </div>
+            </section>`;
+        }
+
+        function Pro() {
+            detail.innerHTML = `
+            <section class="content-section">
+                <h2>製品ラインナップ</h2>
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="img/HeadSet.png" alt="ワイヤレスヘッドホン">
+                    </div>
+                    <div class="product-text">
+                        <h3>ワイヤレスヘッドホン</h3>
+                        <p>ケーブルの煩わしさから解放され、どこでも自由に高音質な音楽を楽しめるワイヤレスヘッドホン。独自のノイズキャンセリング技術により、周囲の騒音を気にせず音楽の世界に没入できます。軽量設計と柔らかなイヤーパッドで、長時間の使用でも快適な装着感を実現。通勤・通学からオンライン会議、リラックスタイムまで、あらゆるシーンであなたの耳に最高のサウンドを届けます。一度使えば手放せなくなる、自由な音楽体験をあなたに。</p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="img/Sp.png" alt="ポータブルスピーカー">
+                    </div>
+                    <div class="product-text">
+                        <h3>ポータブルスピーカー</h3>
+                        <p>コンパクトなボディからは想像できない、パワフルでクリアなサウンドが魅力のポータブルスピーカー。リビングやキッチンはもちろん、キャンプやパーティーなど、どこへでもお気に入りの音楽を持ち運べます。暖かみのあるデザインは、どんな場所にも自然に溶け込み、空間を豊かに彩ります。長時間再生可能なバッテリーを搭載し、一日中音楽を楽しむことが可能。仲間と音楽をシェアする楽しさを、この一台で体験してください。</p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="img/PCSp.png" alt="PC用スピーカー">
+                    </div>
+                    <div class="product-text">
+                        <h3>PC用スピーカー</h3>
+                        <p>デスクでの時間を、もっと豊かに。ゲームや映画、音楽鑑賞の体験を格段に向上させるPC用スピーカーです。迫力の重低音から繊細な高音まで、あらゆる音域をクリアに再現し、圧倒的な臨場感を生み出します。木目調のナチュラルなデザインは、あなたのデスク周りをスタイリッシュに演出。USBケーブル一本で簡単に接続できる手軽さも魅力です。作業中のBGMから本格的なエンターテイメントまで、デスクの音環境を劇的に変える一台です。</p>
+                    </div>
+                </div>
+            </section>`;
+        }
+
+        function Con() {
+            // お問い合わせフォームの内容は後で追加できます
+            detail.innerHTML = `
+            <section class="content-section">
+                <h2>注意</h2>
+                <p style="text-align:center;">本サイトに訪れていただき、ありがとうございます。</p>
+                <p style="text-align:center;">本サイトの「OnBeat」は架空の企業、Webサイトであり、実際に存在する企業ではありません。</p>
+                </section>`;
+        }
+    </script>
     <footer>
-        <p>&copy; 2025 OnBeat</p>
+        <small>&copy; Koki Shimizu （Generated by Gemini）</small>
     </footer>
 </body>
 </html>

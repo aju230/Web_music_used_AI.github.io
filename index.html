@@ -18,7 +18,7 @@
         }
 
         header {
-            background: repeating-linear-gradient(goldenrod, goldenrod 180px,  #FF7043 100px, #FF7043 350px);
+            background: repeating-linear-gradient(orange, orange 180px,  orangered 100px, orangered 350px);
             color: white;
             text-align: center;
             padding: 2rem 1rem;
@@ -161,7 +161,7 @@
 
         .content-section {
             padding: 2rem;
-            background-color: #fff;
+            background: linear-gradient(to bottom right, lightyellow, #FFCC80);
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         }
@@ -199,7 +199,7 @@
         }
         .cm {
             text-align: center; /* セクション全体を中央揃え */
-            padding: 3rem 0;
+            padding: 0px auto;
             margin-top: 3rem;
         }
         
@@ -215,6 +215,7 @@
             border-radius: 10px; /* 角を丸くする */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 影をつける */
             background-color: #000; /* 読み込み中の背景色 */
+            border: yellow double 2px;
         }
 
         footer {
@@ -223,6 +224,14 @@
             background-color: #FFCC80; /* 薄いオレンジ */
             color: #5D4037;
             margin-top: 2rem;
+        }
+        #tie {
+            font-size: 30px;
+            color: orange;
+        }
+        #tie2 {
+            font-size: 30px;
+            color: orangered;
         }
     </style>
 </head>
@@ -278,7 +287,7 @@
                 <h2>OnBeatとは</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <h3>音楽と、もっと良い関係を。</h3>
+                        <h3 id="tie">音楽と、もっと良い関係を。</h3>
                         <p>OnBeatは、「最高の音質を、もっと身近に」をコンセプトにしたオーディオブランドです。私たちは、音楽が日々の暮らしを豊かにする力を持っていると信じています。通勤中、仕事や勉強に集中したい時、仲間と過ごす楽しい時間。どんなシーンでも、心に響くサウンド体験を提供することで、あなたの日常をより特別なものに変えていきたい。OnBeatの製品は、最新の音響技術と、どんなライフスタイルにも溶け込むカジュアルなデザインを両立させています。</p>
                     </div>
                     <div class="about-image">
@@ -287,7 +296,7 @@
                 </div>
                 <div class="about-content">
                     <div class="about-text">
-                        <h3>暮らしに溶け込むデザイン</h3>
+                        <h3 id="tie2">暮らしに溶け込むデザイン</h3>
                         <p>私たちは、音質だけでなくデザインも重視しています。主張しすぎず、それでいて確かな存在感を放つ。暖かみのある色合いとミニマルなフォルムは、どんなインテリアにも自然に馴染みます。あなたの部屋が、お気に入りの音楽で満たされる特別な空間になるように。OnBeatは、音とデザインの力で、あなたの毎日がもっと心地よく、もっと楽しくなるためのお手伝いをします。さあ、私たちと一緒にお気に入りの音を見つけましょう。</p>
                     </div>
                     <div class="about-image">
@@ -336,8 +345,8 @@
             detail.innerHTML = `
             <section class="content-section">
                 <h2>注意</h2>
-                <p style="text-align:center;">本サイトに訪れていただき、ありがとうございます。</p>
-                <p style="text-align:center;">本サイトの「OnBeat」は架空の企業、Webサイトであり、実際に存在する企業ではありません。</p>
+                <p style="text-align:center;">本サイトに訪れていただき、ありがとうございます！</p>
+                <p style="text-align:center;">本サイトの「OnBeat」は架空の企業であり、Webサイトに表示される説明文や画像は実際には存在しません。</p>
                 </section>`;
         }
     </script>
